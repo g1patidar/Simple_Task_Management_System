@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import "../Admin.css"
 const AddTask = () => {
   // State variables to manage form input and user data
   const [input, setInput] = useState({
@@ -142,9 +142,9 @@ const AddTask = () => {
               onChange={handleChange}
             >
               <option value="">Select Priority</option>
-              <option value="Medium">Medium</option>
-              <option value="High">High</option>
-              <option value="Low">Low</option>
+              <option className="medium-priority" value="Medium">Medium</option>
+              <option className="high-priority" value="High">High</option>
+              <option className="low-priority" value="Low">Low</option>
             </select>
           </div>
 
