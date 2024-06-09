@@ -33,6 +33,7 @@ const UpdateTask = () => {
       .then((res) => {
         console.log(res.data);
         toast.success("Task Updated Successfully");
+        navigate("/admin/all-tasks");
       })
       .catch((err) => {
         console.log(err);
@@ -95,9 +96,9 @@ const UpdateTask = () => {
                 value={input.priority}
                 onChange={handleChange}
               >
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-                <option value="Low">Low</option>
+                <option className="medium-priority" value="Medium">Medium</option>
+                <option className="high-priority" value="High">High</option>
+                <option className="low-priority" value="Low">Low</option>
               </select>
             </div>
             <div className="input_container">

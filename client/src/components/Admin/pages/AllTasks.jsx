@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import "../Admin.css"
 
 const AllTasks = () => {
   // State variables to manage task data and confirmation box visibility
@@ -28,6 +29,7 @@ const AllTasks = () => {
     try {
       const res = await axios.get("http://localhost:5000/api/task/gettask");
       setTask(res.data);
+      console.log(res.data)
     } catch (err) {
       console.log(err);
     }
@@ -68,8 +70,13 @@ const AllTasks = () => {
           </thead>
           <tbody>
             {task.map((key, index) => {
+              console.log(key.priority)
+              let priorityClass = '';
+              if (key.priority === 'High') priorityClass = 'high-priority';
+              if (key.priority === 'Medium') priorityClass = 'medium-priority';
+              if (key.priority === 'Low') priorityClass = 'low-priority';
               return (
-                <tr key={key._id}>
+                <tr className={priorityClass} key={key._id}>
                   <td data-column="S.No">{index + 1}</td>
                   <td data-column="Assigned To">{key.assign.name}</td>
                   <td data-column="Task Title">{key.title}</td>

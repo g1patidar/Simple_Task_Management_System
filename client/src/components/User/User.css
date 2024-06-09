@@ -3,12 +3,13 @@
 	width: 100vw;
 	background-color: red;
 
-	background: #242526;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYPablxNiC70d8PQ1tqHElLSDNYu5oD0E6cfTerizct2Ogrlp436IWN4jGu3_B1PQXkKU&usqp=CAU");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-  background-blend-mode: hard-light;
+    background: #7f8385db;
+    background-image: url("https://img.freepik.com/premium-photo/grey-geometric-technology-background-with-gear-shape_35691-30416.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-blend-mode: soft-light; 
+    background-attachment: fixed;
 }
 .user{
     width: 100vw;
@@ -27,10 +28,10 @@
     border-bottom: 1px solid white;
 }
 .user-nav h2{
-    background-color: #E3E1E1;
-    color: black;
+    background-color: #101B17;
+    color: white;
     padding: 3px 7px;
-    border: 2px solid purple;
+    border: 2px solid white;
     border-radius: 10px;
 }
 .user-nav p{
